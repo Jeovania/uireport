@@ -1,0 +1,9 @@
+<div class="container-default text-center">	
+
+<h2>Bem-vindo(a) <%= @name %>!</h2>
+
+<p>Você pode confirmar seu e-mail atravez do link abaixo:</p>
+
+<p><%= link_to 'Confirme minha conta', confirmation_url(@resource, :confirmation_token => @token), :class => "btn btn-lg btn-primary" %></p>
+
+</div>

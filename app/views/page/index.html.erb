@@ -1,0 +1,47 @@
+<div class="jumbotron text-center h-zigzag">
+	<h1>UI Report</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, placeat, nisi aliquid modi ullam impedit quia maxime incidunt nemo saepe repellendus ut odio temporibus praesentium rem aspernatur ipsa ducimus in!</p>
+	<div class="container">
+		<% if user_signed_in? %>
+			<%= link_to "Começe a usar", profile_index_path, :class => "btn btn-lg btn-default btn-block" %>
+		<% else %>	
+			<%= link_to "Começe a usar", new_user_registration_path, :class => "btn btn-lg btn-default btn-block" %>
+		<% end %>	
+	</div>
+</div>
+
+<div class="container-fluid text-frontpage">
+<div class="row">
+	<div class="col-md-5 col-md-offset-1">
+		<%= image_tag "image.jpg", :class => "img-responsive" %>
+	</div>
+	<div class="col-md-5 text-center">
+		<h2>Suas interfaces para avaliação</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, est, perferendis consectetur corporis esse labore minima molestias exercitationem consequuntur voluptatibus a assumenda totam culpa iusto molestiae! Ad nemo adipisci quas.</p>	
+	</div>
+</div>
+
+<hr>
+
+<div class="row">
+	<div class="col-md-5 col-md-offset-1 text-center">
+		<h2>Suas interfaces para avaliação</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, est, perferendis consectetur corporis esse labore minima molestias exercitationem consequuntur voluptatibus a assumenda totam culpa iusto molestiae! Ad nemo adipisci quas.</p>	
+	</div>
+	<div class="col-md-5">
+		<%= image_tag "image.jpg", :class => "img-responsive" %>
+	</div>
+</div>
+
+<hr>
+
+<div class="row">
+	<div class="col-md-5 col-md-offset-1">
+		<%= image_tag "image.jpg", :class => "img-responsive" %>
+	</div>
+	<div class="col-md-5 text-center">
+		<h2>Suas interfaces para avaliação</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, est, perferendis consectetur corporis esse labore minima molestias exercitationem consequuntur voluptatibus a assumenda totam culpa iusto molestiae! Ad nemo adipisci quas.</p>
+	</div>
+</div>
+</div>
