@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703133312) do
+ActiveRecord::Schema.define(version: 20140703140218) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -132,7 +132,7 @@ ActiveRecord::Schema.define(version: 20140703133312) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.text     "about"
+    t.text     "about",                  default: "",    null: false
     t.integer  "age"
     t.string   "work",                   default: "",    null: false
     t.string   "study",                  default: "",    null: false

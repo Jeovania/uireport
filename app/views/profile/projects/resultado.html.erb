@@ -6,12 +6,11 @@
 
 <div class="page-header text-center">
 	<h1 class="title">Resultado de avaliação para <%= @project.name %><br><small>Estatísticas e comentários de usuários</strong></small></h1>
-	<%= link_to "<i class='flaticon-pdf21 icon-pdf'></i><br><p>Salvar PDF</p>".html_safe, profile_project_resultado_path(@project.id, :format => "pdf"), :class => 'salvar-pdf btn btn-primary pull-right text-center hidden-print' %>
 </div>
 
 <div class="well well-sm text-center"><h3>Problemas nesse projeto: <br><small>Proporção de tópicos com problemas</small></h3></div>
 
-<%= pie_chart @result_problema %>
+<%= pie_chart({"Sem problema" => @result_problema[false], "Com problema" => @result_problema[true] }) %>
 
 <div class="well well-sm text-center"><h3>Tipos de problemas: <br><small>Quais os tipos de problemas mais frequentes</small></h3></div>
 
@@ -25,23 +24,23 @@
 		<div class="row">
 			<div class="col-md-offset-1 col-md-2 btn btn-info zero-radius">
 				<h1><%if @result_gravidade[0].nil? %>0<% else %><%= @result_gravidade[0] %><% end %></h1>
-				<%= 'Problema'.pluralize(@result_gravidade[1]) %> do tipo 0
+				Não é problema
 			</div>
 			<div class="col-md-2 btn btn-warning zero-radius">
 				<h1><%if @result_gravidade[1].nil? %>0<% else %><%= @result_gravidade[1] %><% end %></h1>
-				<%= 'Problema'.pluralize(@result_gravidade[0]) %> do tipo 1
+				<%= 'Problema'.pluralize(@result_gravidade[1]) %> <%= 'Cosmético'.pluralize(@result_gravidade[1]) %>
 			</div>
 			<div class="col-md-2 btn btn-warning zero-radius">
 				<h1><%if @result_gravidade[2].nil? %>0<% else %><%= @result_gravidade[2] %><% end %></h1>
-				<%= 'Problema'.pluralize(@result_gravidade[2]) %> do tipo 2
+				<%= 'Problema'.pluralize(@result_gravidade[2]) %> <%= 'Simples'.pluralize(@result_gravidade[2]) %>
 			</div>
 			<div class="col-md-2 btn btn-danger zero-radius">
 				<h1><%if @result_gravidade[3].nil? %>0<% else %><%= @result_gravidade[3] %><% end %></h1>
-				<%= 'Problema'.pluralize(@result_gravidade[3]) %> do tipo 3
+				<%= 'Problema'.pluralize(@result_gravidade[3]) %> <%= 'Grave'.pluralize(@result_gravidade[3]) %>
 			</div>
 			<div class="col-md-2 btn btn-danger zero-radius">
 				<h1><%if @result_gravidade[4].nil? %>0<% else %><%= @result_gravidade[4] %><% end %></h1>
-				<%= 'Problema'.pluralize(@result_gravidade[4]) %> do tipo 4
+				<%= 'Problema'.pluralize(@result_gravidade[4]) %> <%= 'Gravíssimo'.pluralize(@result_gravidade[2]) %>
 			</div>
 		</div>
 	</li>
@@ -69,9 +68,13 @@
 			    <% end %>				
 				<%= link_to resultado.user.name, profile_index_path(:user => resultado.user.id) %>
 			</div> 
-			<div class="col-md-10">
+			<div class="col-md-9">
 				<p class="text-primary"><strong><i>Comentário para o tópico <%= resultado.question.position %>. <%= resultado.question.name %></i></strong></p>
 				<%= resultado.comment %>
+			</div>
+			<div class="col-md-2 text-center" style="border-left:1px solid #ccc">
+				<h3 style="margin:0px 0px 0 0"><small class="text-center">Severidade</small><br />	
+				<%= resultado.level %></h3>
 			</div>
 		</div>
 	</li>
