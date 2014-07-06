@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       resources :invites
       get 'convidar' => 'projects#invite', :as => 'convidar'
       get 'resultado' => 'projects#resultado'
-    end  
+    end 
     get 'para_avaliar' => 'projects#para_avaliar', :as => 'para_avaliar'
   end
 

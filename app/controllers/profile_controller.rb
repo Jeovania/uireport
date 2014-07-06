@@ -27,4 +27,5 @@ class ProfileController < ApplicationController
   def faq
     
   end
+
 end
