@@ -22,7 +22,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bcrypt', '~> 3.1.7'
-gem 'protected_attributes'
+#gem 'protected_attributes'
 gem 'devise'
 gem 'cancancan'
 gem "paperclip", "~> 4.1"
