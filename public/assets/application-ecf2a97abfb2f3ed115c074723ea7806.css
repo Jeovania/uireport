@@ -6585,9 +6585,10 @@ a i.flaticon:link{
   border-radius: 0 !important;
 }
 .jumbotron{
- 	margin-top:-20px !important;
+  margin-top:-20px !important;
   padding:100px 80px;
   min-height: 640px;
+  margin-bottom: 0px !important;
  }
 
 .jumbotron-outro{
