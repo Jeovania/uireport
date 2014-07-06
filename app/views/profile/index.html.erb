@@ -115,9 +115,9 @@
   $('#star-media').raty({
     readOnly: true,
     noRatedMsg: 'Não avaliado!',
-    path: '/assets',
     hints: ['Ruim', 'Pobre', 'Regular', 'Bom', 'Ótimo'],
-    score: <%= @user_data.average_rating %>
+    score: <%= @user_data.average_rating %>,
+    path: '/assets'
   });
 
   $('#star').raty({
