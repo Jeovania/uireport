@@ -115,7 +115,7 @@
     readOnly: true,
     noRatedMsg: 'Não avaliado!',
     hints: ['Ruim', 'Pobre', 'Regular', 'Bom', 'Ótimo'],
-    score: <%= average_rating(params[:user]) %>,
+    score: <% if params[:user] %><%= average_rating(params[:user]) %><% else %><%= average_rating(@user_data.id) %><% end %>,
     path: '/assets'
   });
 
