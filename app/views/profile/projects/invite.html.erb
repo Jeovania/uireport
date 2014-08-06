@@ -20,7 +20,7 @@
 <div class="row">
 <% count = 0 %>  
 <% @users.each do |user| %>
-  <div class="col-md-3">
+  <div class="col-md-4">
   	<div class="well well-sm">
       <div class="row"> 
         <div class="col-md-4 text-center">
@@ -50,7 +50,7 @@
       readOnly: true,
       noRatedMsg: 'Não avaliado!',
       hints: ['Ruim', 'Pobre', 'Regular', 'Bom', 'Ótimo'],
-      score: <%= @users[count].average_rating %>,
+      score: <%= average_rating(@users[count].id) %>,
       path: '/assets'
     });
   </script>

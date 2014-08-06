@@ -110,13 +110,12 @@
 
 </div>
 
-
 <script>
   $('#star-media').raty({
     readOnly: true,
     noRatedMsg: 'Não avaliado!',
     hints: ['Ruim', 'Pobre', 'Regular', 'Bom', 'Ótimo'],
-    score: <%= @user_data.average_rating %>,
+    score: <%= average_rating(params[:user]) %>,
     path: '/assets'
   });
 

@@ -5,7 +5,7 @@ pt-BR:
   devise:
     confirmations:
       confirmed: "Sua conta foi confirmada com sucesso."
-      send_instructions: "Você receberá um email para confirmar sua conta em alguns minutis."
+      send_instructions: "Você receberá um email para confirmar sua conta em alguns minutos."
       send_paranoid_instructions: "Caso seu endereço de email já exista em nossa base, você receberá um email com instruções sobre como ativar sua conta."
     failure:
       already_authenticated: "Você já está logado."

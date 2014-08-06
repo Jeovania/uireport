@@ -351,3 +351,6 @@ a.salvar-pdf p{
   margin-bottom: 0px !important;
   border-radius: 0px !important;
 }
+.mail-style{
+  border: 5px solid #563E7C;
+}
