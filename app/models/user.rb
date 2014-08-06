@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+         :recoverable, :rememberable, :trackable, :validatable
 
   def convidado(u_id, p_id)
     Profile::Invite.exists?(:user_id => u_id, :project_id => p_id)
