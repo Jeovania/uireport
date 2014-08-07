@@ -354,3 +354,94 @@ a.salvar-pdf p{
 .mail-style{
   border: 5px solid #563E7C;
 }
+
+.list-fix{
+  margin-bottom:-3px; 
+  border-bottom-left-radius:0px; 
+  border-bottom-right-radius:0px;
+}
+
+.btn-yellow {
+  color: #ffffff;
+  background-color: #f1c40f;
+  border-color: #BE9100;
+}
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow:active,
+.btn-yellow.active,
+.open .dropdown-toggle.btn-yellow {
+  color: #ffffff;
+  background-color: #DFB200;
+  border-color: #d58512;
+}
+.btn-yellow:active,
+.btn-yellow.active,
+.open .dropdown-toggle.btn-yellow {
+  background-image: none;
+}
+.btn-yellow.disabled,
+.btn-yellow[disabled],
+fieldset[disabled] .btn-yellow,
+.btn-yellow.disabled:hover,
+.btn-yellow[disabled]:hover,
+fieldset[disabled] .btn-yellow:hover,
+.btn-yellow.disabled:focus,
+.btn-yellow[disabled]:focus,
+fieldset[disabled] .btn-yellow:focus,
+.btn-yellow.disabled:active,
+.btn-yellow[disabled]:active,
+fieldset[disabled] .btn-yellow:active,
+.btn-yellow.disabled.active,
+.btn-yellow[disabled].active,
+fieldset[disabled] .btn-yellow.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-yellow .badge {
+  color: #f0ad4e;
+  background-color: #ffffff;
+}
+
+
+.btn-orange {
+  color: #ffffff;
+  background-color: #ed9c28;
+  border-color: #eea236;
+}
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active,
+.btn-orange.active,
+.open .dropdown-toggle.btn-orange {
+  color: #ffffff;
+  background-color: #e67e22;
+  border-color: #d58512;
+}
+.btn-orange:active,
+.btn-orange.active,
+.open .dropdown-toggle.btn-orange {
+  background-image: none;
+}
+.btn-orange.disabled,
+.btn-orange[disabled],
+fieldset[disabled] .btn-orange,
+.btn-orange.disabled:hover,
+.btn-orange[disabled]:hover,
+fieldset[disabled] .btn-orange:hover,
+.btn-orange.disabled:focus,
+.btn-orange[disabled]:focus,
+fieldset[disabled] .btn-orange:focus,
+.btn-orange.disabled:active,
+.btn-orange[disabled]:active,
+fieldset[disabled] .btn-orange:active,
+.btn-orange.disabled.active,
+.btn-orange[disabled].active,
+fieldset[disabled] .btn-orange.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-orange .badge {
+  color: #f0ad4e;
+  background-color: #ffffff;
+}

@@ -22,7 +22,7 @@ class Profile::ProjectsController < ApplicationController
     @telas = Profile::Tela.where( project_id: @project.id )
     @resultados = Profile::Answer.where(project_id: @project.id).order("question_id ASC")
     @result_problema = Profile::Answer.where(project_id: @project.id).group(:problem).count
-    @result_tipos = Profile::Answer.where('project_id = ? AND problem = ?', @project.id, true).group(:question_id).count
+    @result_tipos = Profile::Answer.joins('LEFT OUTER JOIN admin_questions ON profile_answers.question_id = admin_questions.id').where('project_id = ? AND problem = ?', 1, true).group('admin_questions.name').count
     @result_gravidade = Profile::Answer.where(project_id: @project.id).group(:level).count
     @score = Profile::Answer.where(project_id: @project.id).average(:level)
     if @score.nil?
