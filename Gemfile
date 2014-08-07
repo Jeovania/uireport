@@ -6,6 +6,7 @@ group :development do
   gem 'sqlite3'
   gem 'spring'
   gem 'railroady'
+  gem 'figaro'
 end
 
 group :production do

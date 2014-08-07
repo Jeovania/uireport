@@ -6,7 +6,7 @@
 	<h1>Reenviar e-mail de confirmação</h1>
 </div>
 
-<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => user_confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
 <div class="form-group text-center">
