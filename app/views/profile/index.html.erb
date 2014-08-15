@@ -110,8 +110,6 @@
 
 </div>
 
-Score: <% if params[:user] %><%= average_rating(params[:user]) %><% else %><%= average_rating(@user_data.id) %><% end %>
-
 <script>
   $('#star-media').raty({
     readOnly: true,

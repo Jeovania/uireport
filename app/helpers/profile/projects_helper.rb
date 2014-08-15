@@ -13,13 +13,13 @@ module Profile::ProjectsHelper
     def gravidade valor
   		case valor
   		when 0
-  			'<span class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="top" title="Não há problema aqui. Leia o comentário para veer as dicas do avaliador">Sem problema<span>'
+  			'<span class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Não há problema aqui. Leia o comentário para veer as dicas do avaliador">Sem problema<span>'
   		when 1
-  			'<span class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="O problema cosmético pode ter baixa prioridade para resolução">Cosmético<span>'
+  			'<span class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="top" title="O problema cosmético pode ter baixa prioridade para resolução">Cosmético<span>'
   		when 2
-  			'<span class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Problema simples, que pode (e deve) ser resolvido rapidamente">Simples<span>'
+  			'<span class="btn btn-yellow btn-sm" data-toggle="tooltip" data-placement="top" title="Problema simples, que pode (e deve) ser resolvido rapidamente">Simples<span>'
   		when 3
-  			'<span class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Problema grave. Deve ter alta prioridade para ser resolvido">Grave<span>'
+  			'<span class="btn btn-orange btn-sm" data-toggle="tooltip" data-placement="top" title="Problema grave. Deve ter alta prioridade para ser resolvido">Grave<span>'
   		when 4
   			'<span class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Gravissímo! Problema com prioridade máxima para resolução. Pode ter grande má influência na usabilidade">Gravíssimo<span>'					
   		else

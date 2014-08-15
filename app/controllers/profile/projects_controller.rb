@@ -20,17 +20,6 @@ class Profile::ProjectsController < ApplicationController
 
   def resultado
     @telas = Profile::Tela.where( project_id: @project.id )
-    @resultados = Profile::Answer.where(project_id: @project.id).order("question_id ASC")
-    @result_problema = Profile::Answer.where(project_id: @project.id).group(:problem).count
-    @result_tipos = Profile::Answer.joins('LEFT OUTER JOIN admin_questions ON profile_answers.question_id = admin_questions.id').where('project_id = ? AND problem = ?', 1, true).group('admin_questions.name').count
-    @result_gravidade = Profile::Answer.where(project_id: @project.id).group(:level).count
-    @score = Profile::Answer.where(project_id: @project.id).average(:level)
-    if @score.nil?
-      @nota = 0
-    else  
-      @nota = 4 - @score
-    end 
-    #@resultados = Profile::Answer.select('profile_answers.*, admin_questions.*').joins('INNER JOIN admin_questions ON profile_answers.question_id = admin_questions.id').order('created_at DESC')
   end
 
   # GET /profile/projects/1

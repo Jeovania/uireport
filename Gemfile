@@ -7,6 +7,8 @@ group :development do
   gem 'spring'
   gem 'railroady'
   gem 'figaro'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do

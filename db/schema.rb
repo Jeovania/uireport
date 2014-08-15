@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806121224) do
+ActiveRecord::Schema.define(version: 20140815205030) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20140806121224) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "project_id"
+    t.integer  "tela_id"
   end
 
   create_table "profile_evaluations", force: true do |t|
@@ -103,6 +104,7 @@ ActiveRecord::Schema.define(version: 20140806121224) do
     t.integer  "tela_file_size"
     t.datetime "tela_updated_at"
     t.integer  "position"
+    t.string   "description"
   end
 
   create_table "ratings", force: true do |t|

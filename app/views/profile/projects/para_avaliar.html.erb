@@ -29,7 +29,7 @@
         <td><%= profile_project.project.name %></td>
         <td><%= link_to profile_project.project.user.name, profile_index_path(:user => profile_project.project.user.id) %></td>
         <td><%= image_tag profile_project.project.heuristic.device.icon.url(:thumb) %> <%= profile_project.project.heuristic.name %></td>
-        <td><%= link_to '<i class="tip glyphicon glyphicon-chevron-right" data-toggle="tooltip" data-placement="top" title="Ver o projeto para avaliar"></i>'.html_safe, new_profile_project_answer_path(profile_project.project_id, :p => 1) %></td>
+        <td><%= link_to '<i class="tip glyphicon glyphicon-chevron-right" data-toggle="tooltip" data-placement="top" title="Ver o projeto para avaliar"></i>'.html_safe, profile_project_avaliar_path(profile_project.id) %></td>
       </tr>
     <% end %>
   </tbody>

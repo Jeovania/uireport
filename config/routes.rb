@@ -7,16 +7,18 @@ Rails.application.routes.draw do
   get 'profile/index'
   get 'profile/faq'
 
-
   resources :activities
 
   namespace :profile do
     resources :projects do
-      resources :telas
-      resources :answers
+      resources :telas do 
+        resources :answers
+        get 'relatorio' => 'telas#relatorio', :as => 'relatorio'
+      end
       resources :invites
       get 'convidar' => 'projects#invite', :as => 'convidar'
       get 'resultado' => 'projects#resultado'
+      get 'avaliar' => 'projects#avaliar', :as => 'avaliar'
     end 
     get 'para_avaliar' => 'projects#para_avaliar', :as => 'para_avaliar'
   end

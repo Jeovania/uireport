@@ -1,6 +1,6 @@
 <div class="well well-sm text-center" style="margin-top:-20px; border-radius:0px; padding:5px 0px 3px">
-	<%= link_to '<i class="glyphicon glyphicon-chevron-left"></i> Voltar'.html_safe, profile_para_avaliar_path, :class => 'btn btn-sm btn-default pull-left', :style => 'margin:3px 0 0 3px;' %>
-  	<h4><%= @project.name %> <small>(<strong>Heurística:</strong> <%= @project.heuristic.name %>) | <a data-toggle="modal" href="#myModal" style="margin:3px 0 0 3px;">Sobre o projeto</a></small></h4>
+	<%= link_to '<i class="glyphicon glyphicon-chevron-left"></i> Voltar'.html_safe, profile_project_avaliar_path, :class => 'btn btn-sm btn-default pull-left', :style => 'margin:3px 0 0 3px;' %>
+  	<h4>Tela #<%= @tela.position %> <small><i class="glyphicon glyphicon-info-sign"></i><a data-toggle="modal" href="#myModal" style="margin:3px 0 0 3px;">Sobre</a></small></h4>
 </div>
 
 <div id="paleta" class="row-fluid">
@@ -23,17 +23,9 @@
 	</div>
 
 	<div id="paleta-tela" class="col-md-8 text-center" style="padding-top:15px">
-		<% if @telas.first.nil? %>
-	<h3 class="text-center">Não há telas par avaliar</h3>
-	<% else %>
-	<div class="row">
-	  <% @telas.each do |tela| %>
-	  <div class="col-md-3">
-	    <%= link_to (image_tag tela.tela.url(:medium), :class => "img-thumbnail"), tela.tela.url, :class => 'fancybox', :rel => "testeee" %>
-	  </div>  
-	  <% end %>
-	</div>
-	<% end %>
+
+	    <%= image_tag @tela.tela.url, :class => "img-thumbnail img-responsive" %>
+
 	</div>
 </div>
 
@@ -56,10 +48,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sobre: <%= @project.name %></h4>
+        <h4 class="modal-title" id="myModalLabel">Sobre esta tela</h4>
       </div>
-      <div class="modal-body">
-        <%= @project.description %>
+      <div class="modal-body text-center">
+        <% if @tela.description.nil? %>
+        	<h3>Sem descrição</h3>
+        <% else %>	
+        	<%= @tela.description %>
+        <% end %>
       </div>
     </div>
   </div>

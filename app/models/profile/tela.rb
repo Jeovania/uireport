@@ -1,5 +1,6 @@
 class Profile::Tela < ActiveRecord::Base
 	belongs_to :project
+	has_many :answers, :dependent => :destroy
 
 	acts_as_list scope: :project
 

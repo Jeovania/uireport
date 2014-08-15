@@ -16,6 +16,10 @@
     <%= f.file_field :tela, :class => 'form-control' %>
   </div>
   <div class="form-group">
+    <%= f.label :description, "Descrição" %> <i class="tip glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Adicione uma descrição a essa tela para ajudar o entendimento dos avaliadores"></i><br>
+    <%= f.text_area :description, :rows => '6', :class => 'form-control' %>
+  </div>
+  <div class="form-group">
     <%= f.submit nil, :class => 'btn btn-primary' %>
   </div>
 <% end %>

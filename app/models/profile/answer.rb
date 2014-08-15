@@ -1,5 +1,5 @@
 class Profile::Answer < ActiveRecord::Base
-	belongs_to :project
+	belongs_to :tela
     belongs_to :user, :class_name => 'User'
     belongs_to :question, :class_name => 'Admin::Question'
 
