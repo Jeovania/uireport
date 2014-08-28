@@ -41,7 +41,7 @@
 					<h1><%if @result_gravidade[1].nil? %>0<% else %><%= @result_gravidade[1] %><% end %></h1>
 					<%= 'Problema'.pluralize(@result_gravidade[1]) %> <%= 'Cosmético'.pluralize(@result_gravidade[1]) %>
 				</div>
-				<div class="col-md-6 btn btn-yellow zero-radius">
+				<div class="col-md-6 btn btn-warning zero-radius">
 					<h1><%if @result_gravidade[2].nil? %>0<% else %><%= @result_gravidade[2] %><% end %></h1>
 					<%= 'Problema'.pluralize(@result_gravidade[2]) %> <%= 'Simples'.pluralize(@result_gravidade[2]) %>
 				</div>
