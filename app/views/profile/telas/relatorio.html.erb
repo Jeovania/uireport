@@ -12,7 +12,18 @@
 	<ul class="col-md-6 list-group">
 		<li class="list-group-item well well-sm text-center list-fix"><h3>Problemas nessa tela: <br><small>Proporção de tópicos com problemas</small></h3></li>
 
-		<li class="list-group-item"><%= pie_chart @result_problema %></li>
+		<li class="list-group-item"><%= pie_chart @result_problema, library: {plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            }, tooltip: {
+                pointFormat: '{point.percentage:.1f}%</b>'
+            }} %></li>
 	</ul>
 	
 
@@ -51,7 +62,18 @@
 <ul class="list-group">
 	<li class="list-group-item well well-sm text-center list-fix"><h3>Tipos de problemas: <br><small>Quais os tipos de problemas mais frequentes dentre os fatores avaliados</small></h3></li>
 
-	<li class="list-group-item"><%= pie_chart @result_tipos %></li>
+	<li class="list-group-item"><%= pie_chart @result_tipos, library: {plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            }, tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            }} %></li>
 </ul>
 
 <br>
