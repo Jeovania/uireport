@@ -13,7 +13,8 @@ class Admin::QuestionsController < ApplicationController
   # GET /admin/questions/1
   # GET /admin/questions/1.json
   def show
-    @admin_question = @heuristic.questions.find(params[:id])
+    @id = params[:id]
+    @admin_question = @heuristic.questions.find(@id)
   end
 
   # GET /admin/questions/new
@@ -73,7 +74,7 @@ class Admin::QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_question_params
-      params.require(:admin_question).permit(:name, :description, :heuristic_id)
+      params.require(:admin_question).permit(:name, :description, :heuristic_id, :exemplo, :image)
     end
 
     def get_heuristic

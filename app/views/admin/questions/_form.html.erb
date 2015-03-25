@@ -1,4 +1,4 @@
-<%= form_for [@heuristic, @admin_question],:url => admin_heuristic_questions_path do |f| %>
+<%= form_for [@heuristic, @admin_question],:url => admin_heuristic_questions_path, :html => { :multipart => true }  do |f| %>
   <% if @admin_question.errors.any? %>
     <div class="alert alert-danger">
       <h4><i class="glyphicon glyphicon-remove-sign"></i> Erro ao salvar pergunta:</h4>
@@ -18,6 +18,17 @@
   <div class="form-group">
     <%= f.label :description, "Descrição" %> <i class="tip glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Uma breve descrição/explicação da pergunta (se necessário)."></i><br>
     <%= f.text_area :description, :rows => '12', :class => 'form-control' %>
+  </div>
+
+  <h4>Adicione um exemplo para ajudar no entendimento da pergunta:</h4>
+
+  <div class="form-group">
+    <%= f.label :image, "Imagem de exemplo" %> <i class="tip glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Imagem de exemplo."></i><br>
+    <%= f.file_field :image, :class => 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exemplo, "Exemplo" %> <i class="tip glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Texto explicando o exemplo."></i><br>
+    <%= f.text_area :exemplo, :rows => '12', :class => 'form-control' %>
   </div>
   <div class="form-group">
     <%= f.submit nil, :class => 'btn btn-primary' %>

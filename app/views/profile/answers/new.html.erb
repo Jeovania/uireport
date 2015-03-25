@@ -6,7 +6,27 @@
 <div id="paleta" class="row-fluid">
 	<div id="perguntas" class="bg-primary col-md-4">
 		<div class="well well-sm well-incolor">
-				<h3 style="margin-bottom:-10px"><%= @pergunta.name %></h3> <a href="#collapse<%= @pergunta.id %>" data-toggle="collapse" style="color:#e5dcf4"><br>(<i class="glyphicon glyphicon-info-sign"></i> O que é isso?)</a> | Pergunta <%= params['p']%> de <%= @p_total %>
+				<h3 style="margin-bottom:-10px"><%= @pergunta.name %></h3> <a href="#collapse<%= @pergunta.id %>" data-toggle="collapse" style="color:#e5dcf4"><br>(<i class="glyphicon glyphicon-info-sign"></i> O que é isso?)</a> | <a href="#" style="color:#e5dcf4" data-toggle="modal" data-target="#exemplo">Exemplo</a> | Pergunta <%= params['p']%> de <%= @p_total %>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exemplo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="color:#222222" id="myModalLabel">Exemplo</h4>
+              </div>
+              <div class="modal-body row" style="color:#666666">
+                <div class="col-md-4">
+                  <%= image_tag @pergunta.image.url(:medium) %>
+                </div>
+                <div class="col-md-7 col-md-offset-1">
+                  <p><%= @pergunta.exemplo %></p>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
 				<div id="collapse<%= @pergunta.id %>" class="panel-collapse collapse">
 					<div class="panel-body">

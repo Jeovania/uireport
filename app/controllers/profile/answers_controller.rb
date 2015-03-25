@@ -19,6 +19,7 @@ class Profile::AnswersController < ApplicationController
 
   # GET /profile/answers/new
   def new
+    #@pergunta = Admin::Question.joins('LEFT OUTER JOIN admin_exemples ON admin_exemples.question_id = admin_questions.id').where("heuristic_id = ? AND position = ?", @project.heuristic.id, params[:p]).first
     @pergunta = Admin::Question.where("heuristic_id = ? AND position = ?", @project.heuristic.id, params[:p]).first
     @profile_answer = Profile::Answer.new
   end

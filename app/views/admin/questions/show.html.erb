@@ -12,6 +12,25 @@
   <%= @admin_question.description %>
 </p>
 
+<% if @admin_question.exemplo.nil? %>
+	<div class="text-center well well-incolor">
+		<h2>Não há exemplo para essa pergunta</h2>
+	</div>
+<% else %>	
+	<div class="row well">
+		<div class="page-header text-center">
+			<h2>Exemplo</h2>
+		</div>
+		<div class="col-md-4">
+			<%= image_tag @admin_question.image.url(:medium) %>
+		</div>
+		<div class="col-md-6">
+			<p><%= @admin_question.exemplo %></p>		
+		</div>
+	</div>
+<% end %>
+
+
 <div class="well well-sm">
 <%= link_to '<i class="glyphicon glyphicon-edit"></i> Editar'.html_safe, edit_admin_heuristic_question_path(@heuristic, @admin_question), :class => 'btn btn-primary' %>
 <%= link_to '<i class="glyphicon glyphicon-chevron-left"></i> Voltar'.html_safe, admin_heuristic_questions_path, :class => 'btn btn-default' %>
