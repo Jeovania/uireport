@@ -4,7 +4,6 @@ class Admin::Question < ActiveRecord::Base
   acts_as_list scope: :heuristic
 
   validates_presence_of :name
-  validates_presence_of :exemplo
 
   has_attached_file :image, :styles => { :medium => "300x300>" }, 
   :storage => :dropbox,
