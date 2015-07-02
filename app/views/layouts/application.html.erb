@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -26,9 +26,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+<!--       <ul class="nav navbar-nav">
         <li><%= link_to "Tutorial", page_tutorial_path %></li>
-      </ul>
+      </ul> -->
       <ul class="nav navbar-nav navbar-right">
         <li><form><%= link_to "<i class='glyphicon glyphicon-log-in'></i> Entrar".html_safe, new_user_session_path,:class => "btn btn-primary navbar-btn", :style => "margin-right:5px" %></form></li>
         <li><form><%= link_to "<i class='glyphicon glyphicon-asterisk'></i> Criar conta".html_safe, new_user_registration_path,:class => "btn btn-default navbar-btn" %></form></li>
@@ -44,11 +44,9 @@
   <p class="alert alert-warning alert-margin"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span class="glyphicon glyphicon-exclamation-sign"></span> <%= alert %></p>
 <% end %>
 
-<%= yield %>
+<div class="content-margin">  
+  <%= yield %>
+</div>
 
-<footer class="well well-sm text-center footer-copyright">
-  <p><strong>2014 - UI Report</strong></p>
-  <small>Criado por Jeovania Lopes</small>
-</footer>
 </body>
 </html>

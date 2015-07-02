@@ -15,6 +15,8 @@ end
 
 group :production do
   gem 'pg'
+  # gem 'puma'
+  gem 'unicorn'
   gem 'rails_12factor'
 end
 
@@ -43,10 +45,8 @@ gem 'acts_as_list'
 gem 'jquery-turbolinks'
 gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails' 
 
-gem 'puma'
 
 # Use unicorn as the app server
-#gem 'unicorn'
 
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development

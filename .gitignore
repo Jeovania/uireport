@@ -17,5 +17,6 @@
 
 # Ignore all public uploads
 /public/system
+/public/assets
 # Ignore application configuration
 /config/application.yml

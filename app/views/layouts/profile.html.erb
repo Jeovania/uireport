@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default hidden-print" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top hidden-print" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -36,9 +36,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
         <% if current_user.avatar.exists? %>
-          <%= image_tag current_user.avatar.url(:thumb), :class => "avatar-menu navbar-text" %>
+          <%= image_tag current_user.avatar.url(:thumb), :class => "avatar-menu navbar-text img-circle" %>
       <% else %>
-        <%= image_tag("avatar_medium.png", :class => 'avatar-menu navbar-text') %>
+        <%= image_tag("avatar_medium.png", :class => 'avatar-menu navbar-text img-circle') %>
       <% end %>
 
        <%= current_user.name %> <b class="caret"></b></a>
@@ -60,8 +60,9 @@
 <% if alert %>
   <p class="alert alert-warning alert-margin hidden-print"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span class="glyphicon glyphicon-exclamation-sign"></span> <%= alert %></p>
 <% end %>
-
-<%= yield %>
+<div class="content-margin">  
+  <%= yield %>
+</div>
 
 </body>
 </html>
