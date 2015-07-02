@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.2.1"
+
 gem 'rails', '4.1.0'
 
 group :development do
@@ -41,6 +43,8 @@ gem 'acts_as_list'
 gem 'jquery-turbolinks'
 gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails' 
 
+gem 'puma'
+
 # Use unicorn as the app server
 #gem 'unicorn'
 
@@ -50,4 +54,3 @@ gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails'
 # Use debugger
 #gem 'debugger', group: [:development, :test]
 
-ruby "2.1.2"
